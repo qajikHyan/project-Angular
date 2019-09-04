@@ -1,0 +1,71 @@
+.menu{
+    width: 250px;
+    height: 100vh;
+    background-color: #272c36;
+    transition: 0.4s;
+    position: relative;
+    box-shadow: 5px 2px 12px -6px rgba(0,0,0,0.75);
+}
+.headerMenu{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 22px;
+    padding: 20px;
+    background-color: #1e212a;
+}
+.items{
+    padding: 10px 20px;
+    display: flex;
+    font-size: 18px;
+    width: 100%;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+    position: relative;
+}
+.items:hover{
+    background-color: #34acc7;
+}
+.rotate{
+    transform: rotate(90deg)
+}
+.activeItem{
+    background-color: #394150;
+    border-right: 4px solid #34acc7;
+}
+.logo{
+    transition: 0.4s;
+}
+.ItemsName{
+    transition: 0.4s;
+}
+/* .menuBody{
+    margin-top: 10px;
+} */
+.itemsIcon{
+    width: 15%;
+}
+.menuBtnIcon{
+    cursor: pointer;
+    transition: 0.4s;
+}
+.newMenu{
+    width: 60px;
+}
+.hidden{
+    transform: scale(0);
+    width: 0;
+    height: 0;
+    transition: 0.4s;
+    opacity: 0;
+}
+.position{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #102027;
+}

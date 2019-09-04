@@ -1,0 +1,33 @@
+<div class="menu" [ngClass]="{'newMenu': menuStatus}" >
+    <div class="menuWrapper">
+        <div class="headerMenu">
+            <div class="logo" [ngClass]="{hidden: menuStatus}">LOGO</div>
+            <div class="menuBtn">
+                <i class="fas fa-bars menuBtnIcon" [ngClass]="{'rotate': menuStatus}" (click)="menuEvent()"></i>
+            </div>
+        </div>
+        <div class="menuBody">
+            <div class="items" routerLink='' routerLinkActive="activeItem" [routerLinkActiveOptions]="{exact:
+                true}">
+                <div class="itemsIcon"><i class="fas fa-chart-area"></i></div>
+                <div class="ItemsName" [ngClass]="{hidden: menuStatus}">Dashboards</div>
+            </div>
+            <div class="items" routerLink='/product' routerLinkActive="activeItem">
+                <div class="itemsIcon"><i class="fas fa-microchip"></i></div>
+                <div class="ItemsName" [ngClass]="{hidden: menuStatus}">Product</div>
+            </div>
+            <div class="items" routerLink='/slider' routerLinkActive="activeItem">
+                <div class="itemsIcon"><i class="fas fa-tags"></i></div>
+                <div class="ItemsName" [ngClass]="{hidden: menuStatus}">Slider</div>
+            </div>
+            <div class="items" routerLink=''>
+                <div class="itemsIcon"><i class="fas fa-id-card"></i></div>
+                <div class="ItemsName" [ngClass]="{hidden: menuStatus}">Contact Us</div>
+            </div>
+            <div class="items" routerLink=''>
+                <div class="itemsIcon"><i class="fas fa-industry"></i></div>
+                <div class="ItemsName" [ngClass]="{hidden: menuStatus}">About Us</div>
+            </div>
+        </div>
+    </div>
+</div>

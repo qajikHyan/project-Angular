@@ -1,0 +1,108 @@
+<div style="width: 70px">
+    <div class="chatWrapper" [ngClass]="{'width': menuActive}">
+        <div style="position: relative;">
+            <i class="fas fa-times close" (click)="menuActive = false;notMessanger = true"></i>
+            <div class="iconWrapper" (click)="menuActive = true">
+                <div class="nameChat">
+                    <div class="icon" *ngIf="notMessanger; else userImg">
+                        <i class="far fa-comment-alt" ></i> 
+                    </div>
+                    <ng-template #userImg>
+                        <div class="userImg">
+                            <img src="{{src}}" class="img">
+                        </div>
+                    </ng-template>
+                    <div class="text" *ngIf="notMessanger; else userName">Team Chat</div>
+                    <ng-template #userName>
+                        <div class="text">{{userName2}}</div>
+                    </ng-template>
+                </div>
+            </div>
+            <div class="masangerWrapper">
+                <div class="usersWrapper">
+                    <div class="chatUserWrapper" (click)="openChat($event)">
+                        <img src="assets/Blair.jpg" class="chatUser" title="Alea Shahinyan">
+                        <div class="number" style="display: flex">2</div>
+                        <div class="status" style="background-color: #4caf50;"></div>
+                    </div>
+                    <div class="chatUserWrapper" (click)="openChat($event)">
+                        <img src="assets/Arnold.jpg" class="chatUser" title="Karen Arzumanyan">
+                        <div class="number"></div>
+                        <div class="status" style="background-color: #f44336"></div>
+                    </div>
+                    <div class="chatUserWrapper">
+                        <img src="assets/alice.jpg" class="chatUser" title="Alea Shahinyan">
+                        <div class="number" style="display: flex">3</div>
+                        <div class="status" style="background-color: #4caf50;"></div>
+                    </div>
+                    <div class="chatUserWrapper">
+                        <img src="assets/Blair.jpg" class="chatUser" title="Alea Shahinyan">
+                        <div class="number"></div>
+                        <div class="status"></div>
+                    </div>
+                    <div class="chatUserWrapper">
+                        <img src="assets/Arnold.jpg" class="chatUser" title="Alea Shahinyan">
+                        <div class="number"></div>
+                        <div class="status"></div>
+                    </div>
+                    <div class="chatUserWrapper">
+                        <img src="assets/alice.jpg" class="chatUser" title="Alea Shahinyan">
+                        <div class="number"></div>
+                        <div class="status" style="background-color: rgb(255, 193, 8)"></div>
+                    </div>
+                    <div class="chatUserWrapper">
+                        <img src="assets/Blair.jpg" class="chatUser" title="Alea Shahinyan">
+                        <div class="number"></div>
+                        <div class="status"></div>
+                    </div>
+                    <div class="chatUserWrapper">
+                        <img src="assets/Arnold.jpg" class="chatUser" title="Alea Shahinyan">
+                        <div class="number" style="display: flex">2</div>
+                        <div class="status" style="background-color: #4caf50;"></div>
+                    </div>
+                    <div class="chatUserWrapper">
+                        <img src="assets/alice.jpg" class="chatUser" title="Alea Shahinyan">
+                        <div class="number"></div>
+                        <div class="status"></div>
+                    </div>
+                    <div class="chatUserWrapper">
+                        <img src="assets/Blair.jpg" class="chatUser" title="Alea Shahinyan">
+                        <div class="number"></div>
+                        <div class="status"></div>
+                    </div>
+                    <div class="chatUserWrapper">
+                        <img src="assets/Arnold.jpg" class="chatUser" title="Alea Shahinyan">
+                        <div class="number"></div>
+                        <div class="status"></div>
+                    </div>
+                    <div class="chatUserWrapper">
+                        <img src="assets/alice.jpg" class="chatUser" title="Alea Shahinyan">
+                        <div class="number"></div>
+                        <div class="status"></div>
+                    </div>
+                </div>
+                <div class="chat">
+                    <div class="notMessage" *ngIf="notMessanger; else messanger">
+                        <i class="far fa-comment-alt" style="font-size: 100px"></i> <br>
+                        <p style="text-align: center; color: #7c7c7c;"> Select a contact to start a<br> conversation.</p>
+                    </div>
+                    <ng-template #messanger>
+                        <div class="chatMessanger">
+                            <div class="chatArea">
+                                
+                            </div>
+                            <div class="textWrapper">
+                                <div class="textArea">
+                                    <textarea name="" rows="1" placeholder="Type your message"></textarea>
+                                    <div class="plane">
+                                        <i class="fab fa-telegram-plane"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

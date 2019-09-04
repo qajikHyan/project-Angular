@@ -1,0 +1,10 @@
+<div class="pages">
+    <app-header></app-header>
+    <div class="main" data-simplebar>
+        <app-user-header></app-user-header>
+        <main class="site-content" [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''" >
+            <router-outlet class="maincontent"#o="outlet"></router-outlet>
+        </main>
+    </div>
+    <app-chat></app-chat>
+</div>

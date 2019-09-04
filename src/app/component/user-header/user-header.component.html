@@ -1,0 +1,58 @@
+<div class="wrapper">
+    <div class="left">
+        <i class="far fa-calendar-alt"></i>
+    </div>
+    <div class="right">
+        <div class="userWrapper hover" (click)="dropdown()" (clickOutside)="dropdownStatus= false">
+            <img src="assets/Barrera.jpg" class="user">
+            <div class="name">
+                Carliy Adams 
+            </div>
+            <i class="fas fa-chevron-down"></i>
+            <div class="dropdownUser" [ngClass]="{'avtivDropdown': dropdownStatus}" style="width: 101.5%">
+                <div class="items">
+                    <div class="itemsIcon"><i class="far fa-user-circle"></i></div>
+                    <div class="text">My Profile</div>
+                </div>
+                <div class="items">
+                    <div class="itemsIcon"><i class="far fa-envelope"></i></div>
+                    <div class="text">Inpox</div>
+                </div>
+                <div class="items">
+                    <div class="itemsIcon"><i class="fas fa-sign-out-alt"></i></div>
+                    <div class="text">Logout</div>
+                </div>
+            </div>
+        </div>
+        <div class="searchBtn hover" (click)="search()">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="language hover" (click)="lnStatus = !lnStatus" (clickOutside)="lnStatus = false">
+            <img src="assets/us.png" style="margin-right: 10px;">EN
+            <div class="dropdownUser" [ngClass]="{'avtivDropdown': lnStatus}" style="width: 102%">
+                <div class="items" style="align-items: center">
+                    <img src="assets/us.png" style="margin-right: 5px">
+                    <div class="text">EN</div>
+                </div>
+                <div class="items" style="align-items: center">
+                    <img src="assets/us.png" style="margin-right: 5px">                    
+                    <div class="text">RUS</div>
+                </div>
+            </div>
+        </div>
+        <div class="rightMenu hover" (click)="rightMenu = !rightMenu" (clickOutside)="rightMenu = false">
+            <i class="fas fa-bars"></i>
+            <div class="rightMenuWrapper" [ngClass]="{'rightMenuActive': rightMenu}">
+                <div class="rightMenu2" [ngClass]="{'rightMenuActive2': rightMenu}">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="searchWrapper" [ngClass]="{'activ-search': activSearch}">
+        <input type="text" placeholder="Search" class="inp">
+        <div class="closeWrapper">
+           <i class="fas fa-times close" (click)="activSearch = false"></i> 
+        </div>
+    </div>
+</div>

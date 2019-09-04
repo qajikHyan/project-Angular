@@ -1,0 +1,73 @@
+<div class="dashboardWrapper">
+    <div class="chartWrapper" data-aos="fade-up">
+        <div class="charts">
+            <div class="chartSection" style="margin: 0 35px 20px 0;">
+                <p>Conversion</p>
+                <div class="number">
+                    <aside>492</aside>
+                    <span>
+                        <i class="fas fa-chart-line"></i> 13%
+                    </span>
+                    of target
+                </div>
+                <div class="chart-container" style="position: relative; height:auto; width:100%">
+                    <canvas baseChart
+                    [datasets]="barChartData"
+                    [labels]="barChartLabels"
+                    [options]="barChartOptions"
+                    [legend]="barChartLegend"
+                    [colors]="barChartColors"
+                    [chartType]="barChartType"></canvas>
+                </div>
+            </div>
+            <div class="chartSection" style="margin: 0 35px 20px 0;">
+                <p>Impressions</p>
+                <div class="number">
+                    <aside>87k</aside>
+                    <span>
+                        <i class="fas fa-chart-line"></i> 12%
+                    </span>
+                        of target
+                </div>
+                <div class="chart-container" style="position: relative; height:auto; width:100%">
+                    <canvas baseChart
+                    [datasets]="barChartData"
+                    [labels]="barChartLabels"
+                    [options]="barChartOptions"
+                    [legend]="barChartLegend"
+                    [colors]="barChartColors"
+                    [chartType]="barChartTypeline"></canvas>
+                </div>
+            </div>
+            <div class="chartSection" style="margin-bottom: 20px">
+                <p>Impressions</p>
+                <div class="number">
+                    <aside>882</aside>
+                    <span style="color: rgb(244, 67, 54)">
+                        <i class="fas fa-chart-line"></i> -9%
+                    </span>
+                        of target
+                </div>
+                <div class="chart-container" style="position: relative; height:auto; width:100%">
+                    <canvas baseChart
+                    [datasets]="barChartData"
+                    [labels]="barChartLabels"
+                    [options]="barChartOptions"
+                    [legend]="barChartLegend"
+                    [colors]="barChartColors2"
+                    [chartType]="barChartType"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="title">How many pages your users visit?</div>
+        <div class="chartSection">
+            
+            <app-visitors></app-visitors>
+        </div>
+    </div>
+    <div class="rightWrapper">
+        <!-- <div class="chartSection">
+            <app-doughnut></app-doughnut>
+        </div> -->
+    </div>
+</div>
