@@ -22,7 +22,7 @@
     "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
     "angular-font-awesome": "^3.1.2",
     "aos": "^3.0.0-beta.6",
-    "chart.js": "^2.8.0",
+    "chart.js": "^2.9.4",
     "font-awesome": "^4.7.0",
     "jquery": "^3.4.1",
     "jqwidgets-scripts": "^8.1.4",
